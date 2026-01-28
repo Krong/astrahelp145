@@ -11,6 +11,13 @@ on:
       - 'src/'
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+
 
 permissions:
   contents: read
