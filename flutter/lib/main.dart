@@ -116,10 +116,10 @@ Future<void> main(List<String> args) async {
       disableWindowMovable(kWindowId);
     }
 
-    await bind.mainSetOption(key: 'custom-rendezvous-server', "help.astrapage.ru");
-    await bind.mainSetOption(key: 'relay-server', "");
-    await bind.mainSetOption(key: 'api-server', "");
-    await bind.mainSetOption(key: 'key', "uiLVcdMcRefFJv1q3DpJq8ozGe8AOeL+6ujOkCFbMes=");
+    await bind.mainSetOption(key: 'custom-rendezvous-server', value: "help.astrapage.ru");
+    await bind.mainSetOption(key: 'relay-server', value: "");
+    await bind.mainSetOption(key: 'api-server', value: "");
+    await bind.mainSetOption(key: 'key', value: "uiLVcdMcRefFJv1q3DpJq8ozGe8AOeL+6ujOkCFbMes=");
 
     runMainApp(true);
   }
