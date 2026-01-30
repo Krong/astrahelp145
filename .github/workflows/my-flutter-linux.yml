@@ -1,0 +1,12 @@
+name: My Flutter Linux Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-my-flutter-linux-build:
+    uses: ./.github/workflows/my-flutter-linux-build.yml
+    secrets: inherit
+    with:
+      upload-artifact: true
+      upload-tag: "nightly"
