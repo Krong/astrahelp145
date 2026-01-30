@@ -184,12 +184,25 @@ class _DesktopHomePageState extends State<DesktopHomePage>
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
 //       child: ConnectionPage(),
-	child: Center(
-		child: Image.asset(
-			'assets/astrapage_logo.png',
-			width: 183, // Подберите размер
-			height: 46,
-		),
+	child: Column(
+		mainAxisAlignment: MainAxisAlignment.center, // Центрируем всё по вертикали
+		children: [
+			Image.asset(
+				'assets/astrapage_logo.png',
+				width: 183, // Подберите размер
+				height: 46,
+			),
+			Divider(),
+			OnlineStatusWidget(
+				onSvcStatusChanged: () {
+					if (isInHomePage()) {
+						Future.delayed(Duration(milliseconds: 300), () {
+							_updateWindowSize();
+						});
+					}
+				},
+			).marginOnly(bottom: 6, right: 6)
+		]
 	),
     );
   }
