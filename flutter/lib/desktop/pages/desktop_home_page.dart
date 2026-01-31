@@ -185,8 +185,10 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       color: Theme.of(context).scaffoldBackgroundColor,
         //mike
         //child: ConnectionPage(),
-	child: SizedBox(
-		width: 250, // <--- Укажите здесь нужную ширину
+	child: ConstrainedBox(
+		constraints: const BoxConstraints(
+			minWidth: 250, // Минимальная ширина
+		),
 		child: Column(
 			children: [
 				Expanded(

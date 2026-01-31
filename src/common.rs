@@ -1039,7 +1039,7 @@ pub fn is_setup(name: &str) -> bool {
 
 pub fn get_custom_rendezvous_server(custom: String) -> String {
     //mike
-    return ASTRA_SERVER.to_string();
+    //return ASTRA_SERVER.to_string();
     //mike
     #[cfg(windows)]
     if let Ok(lic) = crate::platform::windows::get_license_from_exe_name() {
@@ -1531,7 +1531,7 @@ pub fn decode64<T: AsRef<[u8]>>(input: T) -> Result<Vec<u8>, base64::DecodeError
 
 pub async fn get_key(sync: bool) -> String {
     //mike
-    return ASTRA_PUB_KEY.to_string();
+    //return ASTRA_PUB_KEY.to_string();
     //mike
     #[cfg(windows)]
     if let Ok(lic) = crate::platform::windows::get_license_from_exe_name() {
