@@ -65,6 +65,12 @@ pub const DEFAULT_KEEP_ALIVE: i32 = 60_000;
 
 const MIN_VER_MULTI_UI_SESSION: &str = "1.2.4";
 
+//mike
+pub const ASTRA_APP_NAME: &str = "AstraHelp";
+pub const ASTRA_SERVER: &str = "help.astrapage.ru";
+pub const ASTRA_PUB_KEY: &str = "uiLVcdMcRefFJv1q3DpJq8ozGe8AOeL+6ujOkCFbMes=";
+//mike
+
 pub mod input {
     pub const MOUSE_TYPE_MOVE: i32 = 0;
     pub const MOUSE_TYPE_DOWN: i32 = 1;
@@ -1004,7 +1010,7 @@ pub async fn do_check_software_update() -> hbb_common::ResultType<()> {
 pub fn get_app_name() -> String {
     //mike
     //hbb_common::config::APP_NAME.read().unwrap().clone()
-    "AstraHelp".to_string()
+    ASTRA_APP_NAME.to_string()
     //mike
 }
 
@@ -1032,6 +1038,9 @@ pub fn is_setup(name: &str) -> bool {
 }
 
 pub fn get_custom_rendezvous_server(custom: String) -> String {
+    //mike
+    return ASTRA_SERVER.to_string();
+    //mike
     #[cfg(windows)]
     if let Ok(lic) = crate::platform::windows::get_license_from_exe_name() {
         if !lic.host.is_empty() {
@@ -1521,6 +1530,9 @@ pub fn decode64<T: AsRef<[u8]>>(input: T) -> Result<Vec<u8>, base64::DecodeError
 }
 
 pub async fn get_key(sync: bool) -> String {
+    //mike
+    return ASTRA_PUB_KEY.to_string();
+    //mike
     #[cfg(windows)]
     if let Ok(lic) = crate::platform::windows::get_license_from_exe_name() {
         if !lic.key.is_empty() {
