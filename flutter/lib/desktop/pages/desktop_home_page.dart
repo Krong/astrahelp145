@@ -185,28 +185,31 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       color: Theme.of(context).scaffoldBackgroundColor,
         //mike
         //child: ConnectionPage(),
-	child: Column(
-		children: [
-			Expanded(
-				child: Center(
-					child: Image.asset(
-						'assets/astrapage_logo.png',
-						width: 183,
-						height: 46,
+	child: SizedBox(
+		width: 250, // <--- Укажите здесь нужную ширину
+		child: Column(
+			children: [
+				Expanded(
+					child: Center(
+						child: Image.asset(
+							'assets/astrapage_logo.png',
+							width: 183,
+							height: 46,
+						),
 					),
 				),
-			),
-			Divider(),
-			OnlineStatusWidget(
-				onSvcStatusChanged: () {
-					if (isInHomePage()) {
-						Future.delayed(Duration(milliseconds: 300), () {
-							_updateWindowSize();
-						});
-					}
-				},
-			).marginOnly(bottom: 6, right: 6)
-		]
+				Divider(),
+				OnlineStatusWidget(
+					onSvcStatusChanged: () {
+						if (isInHomePage()) {
+							Future.delayed(Duration(milliseconds: 300), () {
+								_updateWindowSize();
+							});
+						}
+					},
+				).marginOnly(bottom: 6, right: 6)
+			]
+		),
 	),
 	//mike
     );
