@@ -183,14 +183,18 @@ class _DesktopHomePageState extends State<DesktopHomePage>
   buildRightPane(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-//       child: ConnectionPage(),
+        //mike
+        //child: ConnectionPage(),
 	child: Column(
-		mainAxisAlignment: MainAxisAlignment.center, // Центрируем всё по вертикали
 		children: [
-			Image.asset(
-				'assets/astrapage_logo.png',
-				width: 183, // Подберите размер
-				height: 46,
+			Expanded(
+				child: Center(
+					child: Image.asset(
+						'assets/astrapage_logo.png',
+						width: 183,
+						height: 46,
+					),
+				),
 			),
 			Divider(),
 			OnlineStatusWidget(
@@ -204,6 +208,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
 			).marginOnly(bottom: 6, right: 6)
 		]
 	),
+	//mike
     );
   }
 

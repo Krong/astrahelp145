@@ -2902,14 +2902,16 @@ class ServerConfig {
 
   /// from local options
   ServerConfig.fromOptions(Map<String, dynamic> options)
-//       : idServer = options['custom-rendezvous-server'] ?? "",
-//         relayServer = options['relay-server'] ?? "",
-//         apiServer = options['api-server'] ?? "",
-//         key = options['key'] ?? "";
-      : idServer = "help.astrapage.ru",
+      //mike
+      //: idServer = options['custom-rendezvous-server'] ?? "",
+      //  relayServer = options['relay-server'] ?? "",
+      //  apiServer = options['api-server'] ?? "",
+      //  key = options['key'] ?? "";
+      : idServer = "",
         relayServer = "",
         apiServer = "",
-        key = "uiLVcdMcRefFJv1q3DpJq8ozGe8AOeL+6ujOkCFbMes=";
+        key = "";
+      //mike
 }
 
 Widget dialogButton(String text,
@@ -3935,22 +3937,24 @@ void earlyAssert() {
 }
 
 void checkUpdate() {
-//   if (!isWeb) {
-//     if (!bind.isCustomClient()) {
-//       platformFFI.registerEventHandler(
-//           kCheckSoftwareUpdateFinish, kCheckSoftwareUpdateFinish,
-//           (Map<String, dynamic> evt) async {
-//         if (evt['url'] is String) {
-//           stateGlobal.updateUrl.value = evt['url'];
-//         }
-//       });
-//       Timer(const Duration(seconds: 1), () async {
-//         bind.mainGetSoftwareUpdateUrl();
-//       });
-//     }
-//   }
+  //mike
+  //if (!isWeb) {
+  //  if (!bind.isCustomClient()) {
+  //    platformFFI.registerEventHandler(
+  //        kCheckSoftwareUpdateFinish, kCheckSoftwareUpdateFinish,
+  //        (Map<String, dynamic> evt) async {
+  //      if (evt['url'] is String) {
+  //        stateGlobal.updateUrl.value = evt['url'];
+  //      }
+  //    });
+  //    Timer(const Duration(seconds: 1), () async {
+  //      bind.mainGetSoftwareUpdateUrl();
+  //    });
+  //  }
+  //}
   // Проверка обновлений отключена
-   return;
+  return;
+  //mike
 }
 
 // https://github.com/flutter/flutter/issues/153560#issuecomment-2497160535

@@ -1002,8 +1002,10 @@ pub async fn do_check_software_update() -> hbb_common::ResultType<()> {
 
 #[inline]
 pub fn get_app_name() -> String {
-//     hbb_common::config::APP_NAME.read().unwrap().clone()
+    //mike
+    //hbb_common::config::APP_NAME.read().unwrap().clone()
     "AstraHelp".to_string()
+    //mike
 }
 
 #[inline]
