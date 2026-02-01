@@ -66,15 +66,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       children: [
         buildLeftPane(context),
         if (!isIncomingOnly) const VerticalDivider(width: 1),
-	//mike
-        //if (!isIncomingOnly) Expanded(child: buildRightPane(context)),
-	if (!isIncomingOnly) ConstrainedBox(
-		constraints: const BoxConstraints(
-			minWidth: 250, // Минимальная ширина
-		),
-		child: Expanded(child: buildRightPane(context)),
-	)
-	//mike
+        if (!isIncomingOnly) Expanded(child: buildRightPane(context)),
       ],
     ));
   }
